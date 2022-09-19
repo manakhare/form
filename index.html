@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <div class="heading">Sign Up</div>
+
+        <div class="form">
+          <form
+            action="/index.html"
+            class="form"
+            id="form"
+            target="_self"
+            onsubmit="validateForm()"
+          >
+            <div class="ele">
+              <label for="username" class="title">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                class="input-text"
+                min="3"
+                max="25"
+                onchange="validateName()"
+                placeholder="Type username"
+                required
+              />
+              <small id="nameErr"></small>
+            </div>
+
+            <div class="ele">
+              <label for="email" class="title">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="useemail"
+                class="input-text"
+                placeholder="Type email"
+                required
+              />
+              <small id="emailErr"></small>
+            </div>
+
+            <div class="ele">
+              <label for="password" class="title">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="input-text"
+                onchange="validatePassword()"
+                placeholder="Type password"
+                
+              />
+              <small id="passwordErr"></small>
+            </div>
+
+            <div class="ele">
+              <label for="cpassword" class="title">Confirm password</label>
+              <input
+                type="password"
+                id="cpassword"
+                name="cpassword"
+                class="input-text"
+                onchange="matchPasswords()"
+                placeholder="Confirm password"
+              />
+              <small id="confirmationErr"></small>
+            </div>
+
+            <div class="ele ele-btn">
+              <input type="submit" value="SIGN UP" id="btn" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
