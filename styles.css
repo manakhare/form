@@ -11,13 +11,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(177, 174, 174);
+    background-color: rgb(44, 42, 42);
 }
 
 .container {
     height: 550px;
     width: 350px;
-    background-color: rgb(243, 239, 239);
+    background-color: rgb(231, 231, 231);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,6 +81,27 @@ input {
     border-radius: 5px;
     outline: none;
     border: 1px solid grey;
+    /* position: relative; */
+}
+
+.password-con {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#password {
+    width: 100%;
+}
+#cpassword {
+    width: 100%;
+}
+
+#eye-slash {
+    margin-right: 10px;
+    align-self: flex-end;
+    margin-top: -35px;
+    cursor: pointer;
 }
 
 label{

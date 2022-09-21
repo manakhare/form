@@ -5,11 +5,11 @@ const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const check = document.getElementById("cpassword");
+const eye = document.getElementById("eye-slash");
 
 const passwordMsg =
   "Password must have at least 8 characters that include at least 1 lowercase character, 1 uppercase character, 1 number and 1 special character in (!@#$%^&*)";
 const regex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,30}$/;
-
 
 function validateForm() {
   if (!validateName())
@@ -60,9 +60,8 @@ function matchPasswords() {
   }
 }
 
-
 function setError(input, message) {
-//   console.log(message);
+  //   console.log(message);
   //access parent div element
   const ele = input.parentElement;
   const small = ele.querySelector("small");
@@ -75,7 +74,7 @@ function setError(input, message) {
 }
 
 function setSuccess(input) {
-//   console.log("Success");
+  //   console.log("Success");
   const ele = input.parentElement;
   const small = ele.querySelector("small");
   small.innerText = "";
@@ -87,4 +86,12 @@ function checkPassword(pwd) {
   return pwd.match(regex);
 }
 
-
+function toggle() {
+  if (password.type === "password") {
+    password.type = "text";
+    eye.classList.toggle("fa-eye");
+  } else {
+    password.type = "password";
+    eye.classList.toggle("fa-eye");
+  }
+}

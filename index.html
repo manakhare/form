@@ -67,20 +67,30 @@
 
             <div class="ele">
               <label for="password" class="title">Password</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                class="input-text"
-                onchange="validatePassword()"
-                placeholder="Type password"
-                
-              />
-              <small id="passwordErr"></small>
+              <div class="password-con">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="input-text"
+                  onchange="validatePassword()"
+                  placeholder="Type password"
+                />
+                <i
+                  class="fa-regular fa-eye-slash"
+                  id="eye-slash"
+                  onclick="toggle()"
+                ></i>
+
+                <small id="passwordErr"></small>
+              </div>
             </div>
 
             <div class="ele">
               <label for="cpassword" class="title">Confirm password</label>
+              <div class="password-con">
+
+              </div>
               <input
                 type="password"
                 id="cpassword"
@@ -89,6 +99,7 @@
                 onchange="matchPasswords()"
                 placeholder="Confirm password"
               />
+              
               <small id="confirmationErr"></small>
             </div>
 
